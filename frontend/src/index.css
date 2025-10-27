@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+}
+
+.rust {
+  color: #b7410e;
+}
+
+.beige-bg {
+  background-color: #f5f0e1;
+}
