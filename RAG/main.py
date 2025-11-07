@@ -1,78 +1,92 @@
+# --- ADDED: Centralized Warning Supression ---
+# We put this at the very top, before any other imports
+import os
+import warnings
+
+# Hide TensorFlow/oneDNN spam
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2' 
+
+# Hide basic deprecation warnings
+warnings.filterwarnings("ignore", category=FutureWarning)
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+# --- End of Add ---
+
+import streamlit as st
 from rag_core import RAGPipeline
 from query_enricher import QueryEnricher
 from knowledge_graph import MahanamaKnowledgeGraph
 import config
-import warnings
+import io
+import contextlib # Used to capture terminal output
 
-def run():
+# This caches the pipeline so it only loads ONCE.
+@st.cache_resource
+def load_pipeline():
     """
-    Initializes and runs the RAG pipeline.
-    This is the main script to run for Phase 2 (Querying).
+    Initializes and returns the RAG pipeline.
+    This function is cached by Streamlit.
     """
-    # Suppress minor warnings
-    warnings.filterwarnings("ignore", category=FutureWarning)
-
     if not config.OPENAI_API_KEY:
-        print("=" * 50)
-        print(" ERROR: OPENAI_API_KEY is not set.")
-        print(" Please create a file named '.env' in this directory.")
-        print(" Add the following line to it:")
-        print(" OPENAI_API_KEY='sk-...'")
-        print("=" * 50)
-        return
+        st.error("OPENAI_API_KEY is not set in .env file!")
+        return None
 
     try:
-        print("Initializing Mahānveşana RAG Pipeline...")
-        
-        # 1. Initialize Knowledge Graph
+        # This is the EXACT init logic from your main.py
+        print("Initializing Mahānveşana RAG Pipeline (this runs once)...")
         kg = MahanamaKnowledgeGraph()
-        
-        # 2. Initialize Query Enricher
         enricher = QueryEnricher(kg)
-        
-        # 3. Initialize the main RAG Pipeline
         pipeline = RAGPipeline(enricher)
+        print("...Pipeline loaded successfully.")
+        return pipeline
 
     except FileNotFoundError as e:
-        print("="*50)
-        print(f"ERROR: A required file was not found.")
-        print(f"Details: {e}")
-        print("Please make sure you have:")
-        print(" 1. All 4 JSON files in the root directory.")
-        print(" 2. Run 'python data_processor.py' successfully.")
-        print("="*50)
-        return
+        st.error(f"ERROR: A required file was not found. {e}")
+        st.error("Please make sure all JSON files are present and you have run 'python data_processor.py'")
+        return None
     except Exception as e:
-        print(f"An unexpected error occurred during initialization: {e}")
-        return
+        st.error(f"An unexpected error occurred during initialization: {e}")
+        return None
 
-    # --- Run sample queries ---
+# --- Main Streamlit App UI ---
+
+st.set_page_config(layout="wide")
+st.title("Mahānveşana: A Knowledge-Enhanced RAG Framework")
+st.markdown("---")
+
+# Load the RAG pipeline
+pipeline = load_pipeline()
+
+if pipeline:
+    # Create the user interface
+    st.header("Query the Mahabharata")
     
-    # This query is from your project proposal
-    query1 = "What was the conversation between Janaka and Sulabha?"
-    try:
-        answer1 = pipeline.generate_answer(query1)
-        print("\n" + "="*30 + " QUERY 1 " + "="*30)
-        print(f"Query: {query1}")
-        print(f"Answer: {answer1}")
-        print("="*71)
+    query_text = st.text_area("Enter your query:", height=100)
 
-    except Exception as e:
-        print(f"An error occurred while processing Query 1: {e}")
+    if st.button("Submit Query"):
+        if query_text.strip():
+            with st.spinner("Processing your query... This may take a moment."):
+                
+                # This captures the print() "stats" from the terminal
+                f = io.StringIO()
+                with contextlib.redirect_stdout(f):
+                    # This calls your working pipeline
+                    answer = pipeline.generate_answer(query_text)
+                
+                # Get the captured stats
+                stats = f.getvalue()
 
-    # This query tests the entity enrichment
-    query2 = "What did Dhananjaya say about dharma?"
-    try:
-        answer2 = pipeline.generate_answer(query2)
-        print("\n" + "="*30 + " QUERY 2 " + "="*30)
-        print(f"Query: {query2}")
-        print(f"Answer: {answer2}")
-        print("="*71)
-    
-    except Exception as e:
-        print(f"An error occurred while processing Query 2: {e}")
+                # Display the results
+                st.markdown("### Answer")
+                st.success(answer)
+                
+                st.markdown("---")
 
-
-if __name__ == "__main__":
-    run()
-
+                # Display the captured stats
+                with st.expander("Show Processing Stats"):
+                    st.text(stats)
+        
+        else:
+            st.warning("Please enter a query.")
+else:
+    st.error("RAG Pipeline could not be loaded. Please check the terminal for errors.")
