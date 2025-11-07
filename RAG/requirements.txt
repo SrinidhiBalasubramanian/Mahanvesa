@@ -1,0 +1,13 @@
+# --- Core LLM Framework ---
+langchain
+langchain-openai
+langchain-community
+
+# --- Vector Store & Embeddings ---
+faiss-cpu
+sentence-transformers
+langchain-huggingface
+
+# --- Utilities ---
+python-dotenv
+regex
