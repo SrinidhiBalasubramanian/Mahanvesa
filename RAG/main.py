@@ -1,6 +1,7 @@
 # --- ADDED: Centralized Warning Supression ---
 # We put this at the very top, before any other imports
 import os
+import pandas
 import warnings
 
 # Hide TensorFlow/oneDNN spam
@@ -89,4 +90,5 @@ if pipeline:
         else:
             st.warning("Please enter a query.")
 else:
+
     st.error("RAG Pipeline could not be loaded. Please check the terminal for errors.")
