@@ -1,15 +1,12 @@
-Here is a complete `README.md` file for your GitHub repository, based on all the screenshots and information you've provided.
-
-Just copy and paste this text into the `README.md` file in the root of your repository.
-
------
-
 # Mahānveṣaṇa
 
 ### A Knowledge-Enhanced RAG Framework for the Mahabharata
 
 
 ##  Features
+
+  * **Knowledge-Enhanced RAG:** Implements a multi-stage pipeline that includes embedding search, entity extraction, graph scoring, and score fusion for highly accurate context retrieval.
+  * **Raw Sanskrit Verse Retrieval:** Includes a "Show Retrieved Raw Context" feature that displays the *exact* Sanskrit verses (from `full_text.json`) used to generate the answer.
 
 
 ## Screenshots
@@ -22,10 +19,6 @@ Just copy and paste this text into the `README.md` file in the root of your repo
 
 ### Processing Stats
 ![Processing Stats](assets/3.png)
-
-
-##  How It Works
-
 
 -----
 
@@ -111,3 +104,5 @@ Once you have installed the dependencies, created the `dataset` and `embedding_m
     ```bash
     streamlit run main.py
     ```
+
+
