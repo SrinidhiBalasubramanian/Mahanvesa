@@ -1,63 +1,49 @@
-import os
-# --- ADDED: Hide TensorFlow/oneDNN spam ---
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2' 
-# --- End of Add ---
-import shutil
+import numpy as np
+import pickle
+import faiss
 import config
-from langchain_community.vectorstores import FAISS
-# --- CHANGED: Use new, non-deprecated package ---
-from langchain_huggingface import HuggingFaceEmbeddings
-# --- End of Change ---
-from langchain_core.documents import Document
-from typing import List
+from sentence_transformers import SentenceTransformer
 
-def create_and_save_vector_store(documents: List[Document]):
+class EmbeddingSearchEvaluator:
     """
-    Creates, embeds, and saves a FAISS vector store from documents.
-    This logic is called by data_processor.py.
+    Loads the pre-computed embeddings and model from the notebook.
+    This replaces the old vector_store.py logic.
     """
-    print(f"Loading embedding model: {config.ENG_EMBED_MODEL}...")
-    # Use 'cuda' if GPU is available, otherwise 'cpu'
-    embeddings = HuggingFaceEmbeddings(  # This class is now from langchain_huggingface
-        model_name=config.ENG_EMBED_MODEL,
-        model_kwargs={'device': 'cpu'} 
-    )
-
-    print("Creating vector store... (This may take a moment)")
-    if os.path.exists(config.DB_PATH):
-        print(f"Removing existing database at {config.DB_PATH}")
-        shutil.rmtree(config.DB_PATH)
+    def __init__(self):
+        print(f"Loading embedding model: {config.EMBED_MODEL_NAME}...")
+        self.model = SentenceTransformer(config.EMBED_MODEL_NAME)
         
-    db = FAISS.from_documents(documents, embeddings)
-    
-    print("Vector store created successfully.")
-    print(f"Saving to {config.DB_PATH}...")
-    os.makedirs(os.path.dirname(config.DB_PATH), exist_ok=True)
-    db.save_local(config.DB_PATH)
+        print(f"Loading pre-computed embeddings from {config.EMBEDDINGS_NPY_FILE}...")
+        self.embeddings = np.load(config.EMBEDDINGS_NPY_FILE)
+        
+        print(f"Loading doc IDs from {config.DOC_IDS_PKL_FILE}...")
+        with open(config.DOC_IDS_PKL_FILE, "rb") as f:
+            self.doc_ids = pickle.load(f)
+            
+        print(f"✅ Loaded {len(self.embeddings)} embeddings.")
 
-def load_vector_store():
-    """
-    Loads an existing FAISS vector store from disk.
-    This logic is called by rag_core.py.
-    """
-    if not os.path.exists(config.DB_PATH):
-        print("="*50)
-        print(f"ERROR: Vector store not found at {config.DB_PATH}")
-        print("Please run 'python data_processor.py' first.")
-        print("="*50)
-        raise FileNotFoundError("Vector store not found.")
+        # Normalize for cosine/dot similarity
+        faiss.normalize_L2(self.embeddings)
 
-    print(f"Loading embedding model: {config.ENG_EMBED_MODEL}...")
-    embeddings = HuggingFaceEmbeddings(  # This class is now from langchain_huggingface
-        model_name=config.ENG_EMBED_MODEL,
-        model_kwargs={'device': 'cpu'}
-    )
-    
-    print(f"Loading vector store from {config.DB_PATH}...")
-    db = FAISS.load_local(
-        config.DB_PATH, 
-        embeddings,
-        allow_dangerous_deserialization=True # Required for FAISS
-    )
-    return db, embeddings
+        # Build FAISS index in memory
+        dim = self.embeddings.shape[1]
+        self.index = faiss.IndexFlatIP(dim)
+        self.index.add(self.embeddings)
+        print("✅ FAISS index built in memory.")
+
+    def embedding_scores(self, question: str):
+        """
+        Compute similarity scores of ONE question with ALL chapters.
+        Returns: dict[ch_id] = similarity_score
+        """
+        # Encode and normalize
+        query_vec = self.model.encode([question], convert_to_numpy=True)
+        faiss.normalize_L2(query_vec)
+
+        # Search all documents
+        D, I = self.index.search(query_vec, k=len(self.doc_ids))
+        scores = D[0]
+        ids = [self.doc_ids[i] for i in I[0]]
+
+        # Map chapter → similarity
+        return {doc_id: float(score) for doc_id, score in zip(ids, scores)}
