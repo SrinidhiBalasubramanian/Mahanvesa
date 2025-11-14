@@ -12,13 +12,17 @@ Just copy and paste this text into the `README.md` file in the root of your repo
 ##  Features
 
 
-##  Screenshots
+## Screenshots
 
-| Main Query Interface | Retrieved Sanskrit Context |
-| :---: | :---: |
-| ![Main UI](assets/1.png) | ![Sanskrit Context](assets/2.png) |
-| **Processing Stats** |
-| ![Processing Stats](assets/3.png) |
+### Main Query Interface
+![Main UI](assets/1.png)
+
+### Retrieved Sanskrit Context
+![Sanskrit Context](assets/2.png)
+
+### Processing Stats
+![Processing Stats](assets/3.png)
+
 
 ##  How It Works
 
@@ -89,7 +93,7 @@ The application requires an OpenAI API key.
 2.  Add your API key to this file:
 
     ```
-    OPENAI_API_KEY="sk-YourSecretKeyGoesHere"
+    OPENAI_API_KEY="sk-BLAH BLAH BLAH"
     ```
 
 ##  How to Run
