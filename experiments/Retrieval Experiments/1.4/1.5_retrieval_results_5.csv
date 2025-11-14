@@ -1,0 +1,452 @@
+query,ground_truth,top_ids,correct_in_top_k,rank_of_correct
+What is the main premise and scope of the Mahabharata as described in its introduction?,1.1,"['18.6', '14.41', '14.44']",False,
+Which topics are briefly listed or summarized at the start of the Mahabharata?,1.1,"['1.62', '18.6', '1.59']",False,
+What glories or benefits are said to come from reading or listening to the Mahabharata?,1.1,"['18.6', '1.1', '1.59']",True,2.0
+What is the significance of the Samantpanchak region in the Mahabharata?,1.2,"['9.55', '1.2', '3.163']",True,2.0
+How is the Akshauhini army described or enumerated in the Mahabharata?,1.2,"['5.19', '5.155', '6.19']",False,
+Which festivals are mentioned in the Mahabharata and what are their meanings or outcomes?,1.2,"['18.6', '3.257', '13.127']",False,
+What are the stated benefits of reading or hearing the Mahabharata in this section?,1.2,"['18.6', '1.62', '1.1']",False,
+Why did Sage Saramaka curse King Janamejaya?,1.3,"['1.3', '12.151', '14.56']",True,1.0
+How did Janamejaya choose Somashrava as his priest for the serpent sacrifice?,1.3,"['1.3', '1.60', '1.53']",True,1.0
+"What is the story of Aruni, Upamanyu, and their devotion to their Guru Uttanka?",1.3,"['13.15', '1.208', '1.167']",False,
+How did Uttanka inspire Janamejaya to perform the Sarpayajna (snake sacrifice)?,1.3,"['1.60', '1.58', '1.37']",False,
+What happened when the demon Puloma arrived at Sage Bhrigu’s ashram?,1.5,"['1.6', '1.5', '1.148']",True,2.0
+What conversation took place between Puloma and the fire god Agni?,1.5,"['1.234', '1.6', '3.217']",False,
+How was Maharshi Chyavana born?,1.6,"['1.6', '1.5', '3.275']",True,1.0
+How did Chyavana destroy the demon Puloma?,1.6,"['1.6', '1.5', '1.148']",True,1.0
+"Why did Bhrigu curse the fire god Agni, and what was the outcome?",1.6,"['1.7', '1.6', '3.217']",True,2.0
+Why did Agni disappear from the world after being cursed by Bhrigu?,1.7,"['1.7', '1.6', '3.217']",True,1.0
+How did Lord Brahma pacify Agni and mitigate his curse?,1.7,"['13.85', '1.234', '13.155']",False,
+"Who was Pramadvara, and how was she born?",1.8,"['1.8', '1.111', '13.154']",True,1.0
+What conversations took place between Pramadvara and Ruru before their marriage?,1.8,"['1.8', '1.9', '13.42']",True,1.0
+"How did Pramadvara die, and what caused her death?",1.8,"['1.9', '1.8', '14.80']",True,2.0
+How was Pramadvara revived to live half of Ruru’s lifespan?,1.9,"['1.9', '1.8', '15.37']",True,1.0
+What happened after Ruru and Pramadvara’s marriage?,1.9,"['1.8', '1.9', '13.42']",True,2.0
+Why did Ruru vow to kill all snakes?,1.9,"['1.10', '1.37', '1.38']",False,
+What teachings did Dundubhaka share with Ruru?,1.10,"['1.10', '1.11', '1.8']",True,1.0
+What is the story of Dundubha’s past as revealed in his autobiography?,1.11,"['3.247', '5.160', '1.200']",False,
+What lessons of non-violence did Dundubha impart to Ruru?,1.11,"['1.10', '1.11', '15.17']",True,2.0
+How did Dundubha’s own life experiences influence his teachings to Ruru?,1.11,"['1.10', '1.11', '1.8']",True,2.0
+Why was Ruru curious about Janamejaya’s snake charmer?,1.12,"['1.12', '1.10', '1.13']",True,1.0
+How did Ruru’s father respond to or satisfy his curiosity?,1.12,"['1.12', '1.8', '1.9']",True,1.0
+What was the significance of the snake charmer in Janamejaya’s story?,1.12,"['1.13', '1.60', '1.54']",False,
+Why did Jaratkaru agree to marry at the request of his ancestors?,1.13,"['1.14', '1.46', '1.47']",False,
+What was the background or reason behind Jaratkaru’s ancestors asking him to marry?,1.13,"['1.14', '1.46', '1.40']",False,
+How did Jaratkaru’s marriage fulfill his ancestors’ wishes?,1.13,"['1.14', '1.46', '1.47']",False,
+How did Jaratkaru come to marry Vasuki’s sister?,1.14,"['1.14', '1.54', '1.47']",True,1.0
+What conditions or circumstances led to the union between Jaratkaru and Vasuki’s sister?,1.14,"['1.47', '1.14', '1.54']",True,2.0
+What is the significance of Jaratkaru’s marriage to Vasuki’s sister in the Mahabharata?,1.14,"['1.47', '1.14', '1.54']",True,2.0
+How did Vinata become Kadru’s slave?,1.23,"['1.20', '3.242', '4.35']",False,
+What is the origin story of Garuda according to the Mahabharata?,1.23,"['1.31', '1.23', '5.105']",True,2.0
+Why did the gods praise Garuda after his birth?,1.23,"['1.34', '1.23', '5.105']",True,2.0
+What was the relationship between Vinata and Kadru in this episode?,1.23,"['8.87', '8.29', '4.53']",False,
+Why did Garuda reduce his brilliance and size?,1.24,"['1.31', '1.23', '5.105']",False,
+How did Aruna come to occupy his place as the charioteer of the Sun?,1.24,"['3.42', '4.36', '7.99']",False,
+"What caused Surya’s intense brilliance and anger, and how was it pacified?",1.24,"['1.173', '3.9', '3.29']",False,
+"What connection exists between Garuda, Aruna, and the Sun in this story?",1.24,"['5.112', '1.34', '1.25']",False,
+Why did Kadru praise Lord Indra in this section?,1.25,"['1.25', '1.31', '3.229']",True,1.0
+How did Indra save the snake that had fainted from the sun’s heat?,1.25,"['1.25', '1.56', '1.53']",True,1.0
+How did Indra cause rain that pleased the serpents?,1.26,"['1.26', '1.25', '1.53']",True,1.0
+What events led to the serpents’ happiness after the rain?,1.26,"['1.27', '1.26', '1.38']",True,2.0
+What is described about the forest of Ramaniyak Island?,1.27,"['6.6', '6.11', '6.12']",False,
+How did Garuda plan to free himself from slavery to Kadru?,1.27,"['1.23', '1.27', '1.34']",True,2.0
+What role did the serpents play in Garuda’s attempt to gain freedom?,1.27,"['1.27', '1.30', '3.180']",True,1.0
+How is the beauty of Ramaniyak Island portrayed in the Mahabharata?,1.27,"['9.54', '6.6', '6.11']",False,
+Why did Garuda go in search of nectar (amrita)?,1.28,"['1.27', '1.34', '1.33']",False,
+Why did Garuda eat the Nishadas as instructed by his mother?,1.28,"['1.28', '1.29', '1.34']",True,1.0
+What challenges did Garuda face on his journey for the nectar?,1.28,"['5.112', '5.105', '1.23']",False,
+What story did Kashyapa tell Garuda about the previous births of the elephant and the tortoise?,1.29,"['1.29', '1.16', '1.30']",True,1.0
+How did Garuda capture the elephant and the tortoise?,1.29,"['1.30', '1.29', '14.75']",True,2.0
+What happened when Garuda met Kashyapa after the banyan branch broke?,1.30,"['1.30', '5.105', '6.56']",True,1.0
+Why did Kashyapa request the Valakhilyas to leave the branch for penance?,1.30,"['13.94', '7.112', '15.8']",False,
+How did Indra insult the Valakhilya sages?,1.31,"['1.31', '3.268', '14.11']",True,1.0
+What penance did the Valakhilyas perform after being insulted by Indra?,1.31,"['1.31', '12.22', '1.208']",True,1.0
+Why did Garuda engage in battle with the gods?,1.32,"['1.32', '1.34', '5.105']",True,1.0
+What was the outcome of Garuda’s battle against the gods?,1.32,"['1.32', '5.105', '1.23']",True,1.0
+"Which gods fought against Garuda, and how were they defeated?",1.32,"['1.32', '6.56', '1.23']",True,1.0
+What happened when Garuda returned with the nectar (amrita)?,1.33,"['1.29', '1.27', '1.34']",False,
+What boon did Lord Vishnu grant to Garuda on his journey?,1.33,"['5.105', '1.33', '1.34']",True,2.0
+"Why did Indra strike Garuda with his thunderbolt, and what was the result?",1.33,"['14.10', '3.288', '8.77']",False,
+How did Indra and Garuda become friends after their conflict?,1.34,"['1.34', '1.31', '1.131']",True,1.0
+What did Garuda do with the nectar when he arrived among the snakes?,1.34,"['1.27', '1.29', '5.112']",False,
+How was Vinata released from slavery through Garuda’s actions?,1.34,"['1.27', '1.23', '1.28']",False,
+What boon did Brahma grant to Sheshnag as a result of his penance?,1.36,"['13.152', '13.103', '13.122']",False,
+How did Sheshnag come to hold the earth upon his head?,1.36,"['13.154', '12.327', '3.189']",False,
+Why were the serpents cursed by their mother?,1.37,"['1.37', '1.54', '1.36']",True,1.0
+How did Vasuki and the other serpents plan to escape from the curse?,1.37,"['1.37', '1.38', '1.39']",True,1.0
+Why did Vasuki’s sister Jaratkaruka decide to marry Jaratkaru Muni?,1.38,"['1.14', '1.54', '1.47']",False,
+What circumstances led to Jaratkaruka’s decision to marry the sage?,1.38,"['1.14', '1.46', '1.40']",False,
+What did Brahma instruct Vasukika to do regarding his sister’s marriage?,1.39,"['1.14', '1.189', '13.20']",False,
+How did Vasukika approach Jaratkaru Muni for the marriage proposal?,1.39,"['1.14', '1.46', '1.194']",False,
+What penance did Jaratkaru perform in this section?,1.40,"['1.40', '1.46', '2.18']",True,1.0
+What incident led King Parikshit to place a dead snake on the sage’s shoulder?,1.40,"['1.41', '1.50', '1.58']",False,
+Why was Krushakaśṛṅgi distressed by the king’s act?,1.40,"['15.19', '11.8', '15.16']",False,
+Why did Shringi Rishi curse King Parikshit?,1.41,"['1.41', '1.50', '1.42']",True,1.0
+How did Sage Shamika react to his son Shringi’s curse?,1.41,"['1.42', '1.3', '7.71']",False,
+Why did Shamika believe that the curse on King Parikshit was unfair?,1.41,"['1.42', '1.3', '9.64']",False,
+What advice did Sage Shamika give his son after he cursed King Parikshit?,1.42,"['1.42', '1.49', '10.16']",True,1.0
+Why did Shamika send Gaurmukha to deliver a message to King Parikshit?,1.42,"['1.42', '1.49', '7.127']",True,1.0
+What preparations did King Parikshit make to protect himself from Takshaka’s curse?,1.42,"['1.41', '1.51', '1.50']",False,
+"Why did Takshaka offer money to Kashyapa, and why did Kashyapa return it?",1.43,"['1.58', '1.43', '1.56']",True,2.0
+How did Takshaka approach King Parikshit through deceit?,1.43,"['1.44', '1.41', '1.56']",False,
+How did Takshaka finally kill King Parikshit?,1.43,"['1.44', '1.51', '1.41']",False,
+How did Janamejaya’s coronation ceremony take place?,1.44,"['1.60', '14.90', '12.40']",False,
+"Whom did Janamejaya marry, and under what circumstances?",1.44,"['1.95', '1.208', '1.3']",False,
+What did Jaratkaru see in his vision of his ancestors?,1.45,"['15.35', '1.40', '2.24']",False,
+What conversation took place between Jaratkaru and his forefathers?,1.45,"['1.46', '1.40', '12.54']",False,
+Why were Jaratkaru’s ancestors in distress in his vision?,1.45,"['15.35', '1.40', '15.21']",False,
+What condition did Jaratkaru set before agreeing to marry?,1.46,"['1.46', '1.14', '1.198']",True,1.0
+How did Jaratkaru meet and marry the daughter of Vasukika?,1.46,"['1.54', '1.14', '1.47']",False,
+Why was Vasukika’s daughter also named Jaratkaru?,1.46,"['1.40', '1.47', '1.54']",False,
+How was the marriage between Jaratkaru and the serpent girl solemnized?,1.47,"['1.54', '1.14', '1.47']",True,3.0
+How did the serpent girl serve her husband with devotion?,1.47,"['12.359', '13.46', '9.52']",False,
+Why did Sage Jaratkaru abandon his wife after marriage?,1.47,"['1.14', '1.46', '1.47']",True,3.0
+Where did Jaratkaru go to perform penance after leaving his wife?,1.47,"['1.46', '1.14', '1.40']",False,
+Why was Vasuki Naga troubled after Jaratkaru left his sister?,1.48,"['1.39', '1.47', '1.14']",False,
+How did Vasuki’s sister console or relieve her brother’s worries?,1.48,"['1.47', '14.15', '13.167']",False,
+"How was Aastika born, and who were his parents?",1.48,"['12.324', '1.8', '2.18']",False,
+What qualities of righteousness and virtue did King Parikshit possess?,1.49,"['12.92', '12.70', '12.71']",False,
+What happened during King Parikshit’s hunting expedition?,1.49,"['3.192', '1.41', '1.49']",True,3.0
+Why did King Parikshit insult or disdain the sage Shamika?,1.49,"['1.42', '1.49', '7.55']",True,2.0
+Why did Shringi Rishi curse King Parikshit?,1.50,"['1.41', '1.50', '1.42']",True,2.0
+How did Takshaka fulfill the curse by killing King Parikshit?,1.50,"['1.51', '1.44', '1.41']",False,
+Why did Kashyapa return after attempting to save Parikshit?,1.50,"['8.69', '8.65', '10.8']",False,
+"How did Janamejaya react upon learning of his father’s death, and what vow did he make?",1.50,"['8.8', '11.1', '11.9']",False,
+Why did the king decide to grant a boon to Aastika?,1.56,"['3.98', '12.133', '15.2']",False,
+Why was Takshaka Naga worried during the serpent sacrifice?,1.56,"['1.51', '1.53', '3.66']",False,
+What boon did Aastika request from the king?,1.56,"['12.324', '15.2', '12.133']",False,
+Which were the chief snakes that were burnt in Janamejaya’s serpent sacrifice?,1.57,"['1.53', '1.60', '1.13']",False,
+How are the names of the serpents listed or described in this chapter?,1.57,"['1.57', '1.35', '3.180']",True,1.0
+When did Vyasa arrive at Janamejaya’s Yajna?,1.60,"['1.60', '15.29', '14.16']",True,1.0
+Who requested Vaishampayana to narrate the Mahabharata?,1.60,"['1.62', '5.198', '10.11']",False,
+In which episode does Vyasa ask Vaishampayana to tell the story of the Mahabharata?,1.60,"['1.62', '6.2', '10.11']",False,
+Where in the Mahabharata is the narration of the epic formally begun?,1.60,"['1.59', '1.62', '1.1']",False,
+Who initiated the recitation of the Mahabharata during Janamejaya’s sacrifice?,1.60,"['1.62', '1.60', '18.6']",True,2.0
+Which section describes King Dushyanta’s power and governance abilities?,1.68,"['12.85', '12.115', '12.80']",False,
+How is King Dushyanta’s rule and strength depicted in the Mahabharata?,1.68,"['9.15', '5.19', '7.10']",False,
+Where is Dushyanta’s administrative skill and valor mentioned?,1.68,"['7.6', '9.15', '6.99']",False,
+What attributes made King Dushyanta a capable ruler according to the text?,1.68,"['12.85', '12.57', '12.115']",False,
+Where does King Dushyanta go hunting in the Mahabharata?,1.69,"['3.64', '3.256', '1.70']",False,
+Which chapter narrates Dushyanta’s hunting expedition in the forest?,1.69,"['1.70', '3.256', '4.65']",False,
+What animals does King Dushyanta hunt and kill?,1.69,"['7.68', '1.70', '3.240']",False,
+Which passage describes Dushyanta’s encounter with wild beasts?,1.69,"['1.70', '3.258', '3.240']",False,
+Which chapter describes Kanva’s ashram and its surroundings?,1.70,"['3.164', '6.11', '9.54']",False,
+When does King Dushyanta enter Sage Kanva’s hermitage?,1.70,"['1.74', '1.71', '15.19']",False,
+Where is the Tapovan described in connection with Dushyanta?,1.70,"['1.71', '1.171', '1.177']",False,
+Which scene introduces Dushyanta’s arrival at Kanva’s ashram?,1.70,"['1.71', '3.183', '5.47']",False,
+Where does Dushyanta first meet and converse with Shakuntala?,1.71,"['1.74', '1.71', '1.73']",True,2.0
+In which part does Shakuntala narrate the story of her birth?,1.71,"['1.69', '1.74', '1.71']",True,3.0
+Which episode describes Indra sending Menaka to disturb Vishwamitra’s penance?,1.71,"['1.72', '14.11', '13.94']",False,
+How are Shakuntala’s origins connected to Vishwamitra and Menaka in the Mahabharata?,1.71,"['1.72', '1.69', '13.3']",False,
+Which chapter narrates the meeting of Menaka and Vishwamitra?,1.72,"['1.175', '1.72', '1.4']",True,2.0
+Where is the birth and rescue of the child Shakuntala described?,1.72,"['1.74', '1.69', '1.72']",True,3.0
+"Who raised Shakuntala after her birth, and how did she get her name?",1.72,"['1.74', '1.69', '1.71']",False,
+How did the Shakunta birds protect the infant Shakuntala?,1.72,"['1.72', '1.32', '1.30']",True,1.0
+Which section describes the Gandharva marriage between Shakuntala and Dushyanta?,1.73,"['1.73', '1.74', '1.71']",True,1.0
+Who approved the marriage of Shakuntala and Dushyanta in the Mahabharata?,1.73,"['1.73', '1.74', '1.71']",True,1.0
+What type of marriage took place between Shakuntala and Dushyanta?,1.73,"['1.73', '1.74', '1.71']",True,1.0
+In which part is Kanva’s approval of Shakuntala’s marriage mentioned?,1.73,"['1.74', '1.71', '1.73']",True,3.0
+Which chapter narrates the birth of Shakuntala’s son Bharata?,1.74,"['1.69', '1.59', '1.83']",False,
+Where does Shakuntala meet Dushyanta after giving birth to her son?,1.74,"['1.74', '1.71', '1.73']",True,1.0
+In which episode does Akashvani confirm Shakuntala’s purity?,1.74,"['1.71', '5.13', '5.14']",False,
+Where is Bharata’s coronation described in the Mahabharata?,1.74,"['18.6', '12.40', '8.76']",False,
+How is Shakuntala’s confrontation with Dushyanta depicted?,1.74,"['1.74', '1.69', '1.71']",True,1.0
+Which section describes King Pandu accidentally killing a sage disguised as a deer?,1.118,"['14.84', '1.118', '3.50']",True,2.0
+Who cursed King Pandu and why?,1.118,"['5.128', '1.125', '1.142']",False,
+Where is the origin of Pandu’s curse narrated?,1.118,"['1.119', '1.125', '1.114']",False,
+What event caused Pandu to renounce his royal duties?,1.118,"['5.20', '1.127', '1.142']",False,
+Which chapter describes King Pandu’s repentance for killing the sage?,1.119,"['1.150', '1.125', '1.119']",True,3.0
+Where does Pandu renounce worldly life and take sannyasa?,1.119,"['1.126', '1.120', '1.168']",False,
+What role did Pandu’s wives play in his decision to enter the forest?,1.119,"['1.125', '1.114', '15.18']",False,
+Which episode marks Pandu’s entry into Vanaprastha Ashram?,1.119,"['5.47', '5.32', '9.62']",False,
+Which story in the Mahabharata describes Bhadra giving birth from the body of her dead husband?,1.121,"['4.17', '5.190', '3.63']",False,
+"Who was Vyushitashva, and what was the miracle involving his wife Bhadra?",1.121,"['1.121', '14.66', '13.53']",True,1.0
+Where is the tale of Bhadra and Vyushitashva mentioned?,1.121,"['14.66', '2.31', '1.178']",False,
+Which section recounts the miraculous birth narrated by Bhadra?,1.121,"['1.59', '14.66', '14.70']",False,
+Which episode narrates the return of Kunti and the Pandavas to Hastinapura?,1.126,"['15.18', '1.207', '3.311']",False,
+Who escorted the Pandavas and Kunti to Bhishma after Pandu’s death?,1.126,"['1.126', '1.206', '6.109']",True,1.0
+Where does the Mahabharata describe the meeting between Bhishma and the Pandavas?,1.126,"['15.24', '6.89', '6.116']",False,
+What was Bhishma’s role in receiving Kunti and her sons?,1.126,"['1.203', '12.326', '15.2']",False,
+Where is the funeral of Pandu and Madri described?,1.127,"['1.127', '1.125', '1.150']",True,1.0
+Which section mentions the Pandavas performing rites for their parents?,1.127,"['15.24', '15.27', '15.22']",False,
+How did the brothers offer water and tribute to Pandu and Madri?,1.127,"['1.113', '1.114', '1.127']",True,3.0
+What significance does this ritual hold in the Pandavas’ early life?,1.127,"['15.22', '2.77', '15.27']",False,
+Which chapter describes the childhood of the Pandavas and Kauravas?,1.128,"['1.165', '15.24', '3.182']",False,
+Where is Duryodhana’s attempt to poison Bhima mentioned?,1.128,"['6.78', '7.177', '11.15']",False,
+What happened to Bhima after he was pushed into the Ganga?,1.128,"['1.129', '8.76', '11.13']",False,
+Which section narrates Bhima’s journey to Nagaloka and his drinking of divine nectar?,1.128,"['3.152', '3.161', '4.17']",False,
+Which section describes Kunti’s anxiety over Bhima’s disappearance?,1.129,"['1.129', '1.162', '3.161']",True,1.0
+Where does Bhima return from the Nagaloka after gaining strength?,1.129,"['1.129', '12.361', '4.21']",True,1.0
+How did Duryodhana react after Bhima’s return from the Nagas’ realm?,1.129,"['1.129', '7.132', '9.61']",True,1.0
+Which chapter continues the conflict between Bhima and Duryodhana after Bhima’s return?,1.129,"['6.78', '7.131', '1.129']",True,3.0
+Who built the secret tunnel beneath the Lakshagriha?,1.147,"['3.163', '1.6', '3.156']",False,
+Which miner did Vidura send to construct a tunnel for the Pandavas?,1.147,"['1.147', '3.5', '1.149']",True,1.0
+Where in the Mahabharata is the tunnel under the house of lac described?,1.147,"['12.44', '3.129', '14.65']",False,
+How did Vidura help the Pandavas prepare for their escape from the Lakshagriha?,1.147,"['3.7', '3.5', '1.149']",False,
+Which chapter describes the burning of the house of lac (Lakshagriha)?,1.148,"['1.150', '1.141', '1.148']",True,3.0
+How did the Pandavas escape from the burning Lakshagriha?,1.148,"['6.89', '1.226', '3.258']",False,
+Where is the Pandavas’ night-time escape through the tunnel mentioned?,1.148,"['3.182', '15.24', '4.26']",False,
+"Who set fire to the Lakshagriha, and what was the outcome?",1.148,"['7.177', '1.181', '3.39']",False,
+Who arranged for the Pandavas to cross the Ganga after escaping the Lakshagriha?,1.149,"['1.170', '3.114', '15.24']",False,
+Which sailor helped the Pandavas flee across the river?,1.149,"['9.30', '15.24', '4.26']",False,
+Where is Vidura’s assistance in ferrying the Pandavas across the Ganges described?,1.149,"['3.5', '1.170', '1.149']",True,3.0
+What role did the boatman play in helping the Pandavas escape?,1.149,"['9.30', '15.24', '3.258']",False,
+Which chapter narrates Dhritarashtra’s mourning and offering of water for the supposedly dead Pandavas?,1.150,"['9.30', '15.24', '7.85']",False,
+Where is the ritual condolence for the Pandavas mentioned?,1.150,"['14.14', '15.24', '1.213']",False,
+How did Dhritarashtra and others react to the news of the Pandavas’ death in the fire?,1.150,"['1.150', '9.30', '9.61']",True,1.0
+Which passage marks the Pandavas’ entry into the forest after the Lakshagriha incident?,1.150,"['3.163', '3.258', '15.24']",False,
+Which section describes Bhima’s sorrow seeing his family suffer in the forest?,1.151,"['1.151', '3.161', '1.129']",True,1.0
+Where is Bhimasena shown bringing water for Kunti?,1.151,"['3.153', '3.68', '3.161']",False,
+How does Bhima react to Kunti and his brothers sleeping on the bare ground?,1.151,"['1.129', '3.161', '3.35']",False,
+In which episode does Bhima express anger towards Duryodhana after their escape?,1.151,"['7.132', '6.78', '6.80']",False,
+Where does Hidimbi first encounter Bhima and the Pandavas?,1.152,"['6.89', '1.129', '1.154']",False,
+Which chapter introduces the demoness Hidimba and her dialogue with Bhima?,1.152,"['1.154', '1.155', '1.153']",False,
+How is the first meeting between Bhima and Hidimba described?,1.152,"['1.153', '1.154', '1.155']",False,
+Who sends Hidimbi to meet the Pandavas and why?,1.152,"['1.154', '15.24', '1.152']",True,3.0
+Which section narrates the battle between Bhima and the demon Hidimba?,1.153,"['7.131', '1.153', '1.154']",True,2.0
+Where is Hidimbasura’s fear and confrontation with Bhimasena mentioned?,1.153,"['3.178', '1.155', '3.161']",False,
+Who fights Hidimba in the Mahabharata and what happens in that combat?,1.153,"['5.172', '7.177', '1.154']",False,
+Which chapter depicts Bhima’s combat with the rakshasa Hidimbasura?,1.153,"['7.177', '1.154', '3.11']",False,
+In which episode does Bhima slay Hidimbasura?,1.154,"['1.155', '1.154', '1.129']",True,2.0
+Where does Hidimba express her affection toward Bhima and Kunti?,1.154,"['1.155', '1.154', '1.152']",True,2.0
+Who kills the rakshasa Hidimba and under what circumstances?,1.154,"['1.155', '7.177', '1.154']",True,3.0
+Which passage describes Hidimba’s confession of feelings before Bhima kills Hidimbasura?,1.154,"['1.155', '1.153', '1.154']",True,3.0
+Which chapter tells of Yudhishthira stopping Bhima from killing Hidimba?,1.155,"['1.155', '1.154', '7.177']",True,1.0
+Where is the story of Bhima and Hidimbi’s union and the birth of Ghatotkacha narrated?,1.155,"['1.154', '1.129', '3.161']",False,
+Who was Ghatotkacha and how was he born?,1.155,"['7.178', '7.180', '7.176']",False,
+Which section contains Hidimbi’s prayer to Bhima before their marriage?,1.155,"['1.155', '1.154', '4.17']",True,1.0
+Where do the Pandavas meet Vyasa after escaping the forest?,1.156,"['15.24', '3.258', '3.238']",False,
+Which chapter marks the Pandavas’ arrival at Ekachakra?,1.156,"['15.24', '5.7', '3.258']",False,
+Who guides the Pandavas to settle temporarily in Ekachakra?,1.156,"['15.18', '4.26', '3.258']",False,
+Where is the meeting between Vyasa and the Pandavas described after the Lakshagriha incident?,1.156,"['15.24', '9.3', '15.28']",False,
+Where is the Pandavas’ departure to the forest described?,3.1,"['15.18', '3.258', '3.238']",False,
+Which chapter mentions the Pandavas staying overnight at Praman-Kotirtha?,3.1,"['3.258', '1.213', '15.24']",False,
+What discussion does Yudhishthira have with the Brahmins about wealth and hospitality?,3.2,"['13.8', '12.124', '13.68']",False,
+Which chapter records Shaunaka’s dialogue with Yudhishthira on dharma and welfare?,3.2,"['1.4', '3.161', '1.49']",False,
+Where does Yudhishthira obtain the Akshaya Patra from Surya?,3.3,"['3.158', '13.68', '13.47']",False,
+Which section describes Yudhishthira’s prayer to Lord Surya for sustenance?,3.3,"['14.2', '15.8', '12.17']",False,
+Which chapter describes Vidura advising Dhritarashtra?,3.4,"['11.4', '5.34', '5.33']",False,
+Where does Dhritarashtra become angry and leave the palace after Vidura’s counsel?,3.4,"['15.16', '5.33', '5.41']",False,
+Where do the Pandavas enter Kamyakavana during their exile?,3.5,"['3.258', '3.238', '15.24']",False,
+Which chapter narrates Vidura’s meeting with the Pandavas in Kamyakavana?,3.5,"['3.5', '15.24', '3.6']",True,1.0
+Who sends Sanjaya to bring Vidura back from the forest?,3.6,"['5.33', '3.6', '5.32']",True,2.0
+In which chapter does Dhritarashtra ask for Vidura’s forgiveness?,3.6,"['5.48', '5.41', '5.33']",False,
+Where do Duryodhana and his allies plan to attack the Pandavas in the forest?,3.7,"['3.262', '3.238', '3.258']",False,
+Which chapter mentions Vyasa stopping Duryodhana from harming the Pandavas?,3.7,"['3.262', '3.242', '3.8']",False,
+Which section records Vyasa advising Dhritarashtra against Duryodhana’s injustice?,3.8,"['5.20', '6.90', '9.61']",False,
+Where does Vyasa intervene to protect the Pandavas from Duryodhana’s schemes?,3.8,"['3.8', '3.262', '3.248']",True,1.0
+What is the story of Surabhi and Indra narrated by Vyasa?,3.9,"['3.9', '1.31', '5.9']",True,1.0
+Where does Vyasa describe Surabhi and Indra showing kindness to the Pandavas?,3.9,"['14.15', '3.262', '3.258']",False,
+Who curses Duryodhana for his arrogance towards Maitreya?,3.10,"['2.64', '3.49', '2.48']",False,
+Which chapter describes Maitreya advising Dhritarashtra to be kind to the Pandavas?,3.10,"['3.262', '5.48', '3.258']",False,
+Which section records Draupadi lamenting her humiliation before Krishna?,3.12,"['3.273', '3.27', '4.20']",False,
+Where do Arjuna and Krishna assure Draupadi after her insult?,3.12,"['3.273', '7.87', '7.33']",False,
+Where does Krishna discuss the evils of gambling with the Pandavas?,3.13,"['2.63', '2.76', '3.13']",True,3.0
+Which chapter mentions Krishna regretting his absence during the dice game?,3.13,"['3.13', '3.21', '11.26']",True,1.0
+Which chapter describes Krishna’s battle with Shalva and the destruction of Saubha?,3.14,"['3.15', '3.16', '3.22']",False,
+Where is Shalva’s defeat by Krishna narrated?,3.14,"['3.20', '3.21', '3.16']",False,
+Where are Dwaraka’s war preparations against Shalva described?,3.15,"['3.16', '3.21', '3.20']",False,
+Which section narrates Krishna’s military preparations before the Saubha battle?,3.15,"['3.16', '3.15', '3.22']",True,2.0
+Which chapter depicts the Yadava army fighting Shalva’s forces?,3.16,"['3.16', '3.17', '9.16']",True,1.0
+Where is Pradyumna shown assuring the Yadava army in battle?,3.16,"['12.99', '6.22', '7.87']",False,
+Which section narrates the duel between Pradyumna and Shalva?,3.17,"['3.17', '3.18', '3.271']",True,1.0
+Where does Pradyumna fight Shalva in a fierce battle?,3.17,"['3.17', '3.18', '12.99']",True,1.0
+Which chapter shows Pradyumna rebuking his charioteer for withdrawing him from battle?,3.18,"['3.18', '3.19', '8.26']",True,1.0
+Where is Pradyumna’s remorse described after being carried from the field?,3.18,"['3.18', '11.16', '11.18']",True,1.0
+Where does Pradyumna defeat Shalva in combat?,3.19,"['3.18', '3.19', '3.17']",True,2.0
+Which section records Shalva’s downfall at Pradyumna’s hands?,3.19,"['3.18', '3.17', '11.23']",False,
+Which chapter narrates the final battle between Krishna and Shalva?,3.20,"['3.17', '3.16', '3.20']",True,3.0
+Where does Krishna destroy Shalva in direct combat?,3.20,"['3.14', '3.21', '3.16']",False,
+Which section records Draupadi’s anger at Yudhishthira during exile?,3.27,"['11.12', '3.27', '4.19']",True,2.0
+Where does Draupadi urge Yudhishthira to fight his enemies?,3.27,"['8.60', '3.27', '4.18']",True,2.0
+Which chapter contains Draupadi’s narration of the dialogue between Prahlad and Bali?,3.28,"['3.28', '1.165', '3.27']",True,1.0
+Where is the story of Prahlad and Bali used by Draupadi to teach forgiveness?,3.28,"['3.28', '3.27', '1.165']",True,1.0
+Where does Yudhishthira discuss the dangers of anger and the virtue of forgiveness?,3.29,"['12.163', '3.29', '12.278']",True,2.0
+Which section records Yudhishthira praising forgiveness as a supreme virtue?,3.29,"['12.299', '13.1', '12.278']",False,
+Where does Draupadi criticize Yudhishthira’s sense of dharma and justice?,3.30,"['3.27', '12.27', '4.18']",False,
+Which chapter describes Draupadi’s grief and reproach of Yudhishthira’s wisdom?,3.30,"['3.27', '3.144', '4.18']",False,
+Which section contains Yudhishthira’s response to Draupadi’s objections about dharma?,3.31,"['3.27', '4.18', '12.200']",False,
+Where does Yudhishthira explain the benefits of honoring God and sages?,3.31,"['13.139', '13.8', '13.125']",False,
+Where does Draupadi urge Yudhishthira to value effort over destiny?,3.32,"['3.32', '4.18', '3.30']",True,1.0
+Which chapter records Draupadi emphasizing the importance of human endeavor?,3.32,"['3.32', '3.28', '3.30']",True,1.0
+Which section praises Bhima’s valor and urges Yudhishthira to follow Kshatriya dharma?,3.33,"['7.127', '3.36', '3.161']",False,
+Where is Yudhishthira encouraged to take up arms against his enemies?,3.33,"['12.100', '5.79', '5.26']",False,
+Where does Yudhishthira reaffirm his vow to follow dharma in the forest?,3.34,"['3.158', '15.8', '3.256']",False,
+Which chapter introduces the Nalopakhyana Parva with teachings on dharma and conduct?,3.34,"['5.108', '12.240', '12.23']",False,
+Where does Bhima urge Yudhishthira to fight despite their misfortunes?,3.35,"['7.127', '1.162', '3.52']",False,
+Which section shows Bhimasena expressing frustration at Yudhishthira’s patience?,3.35,"['14.87', '3.141', '3.161']",False,
+Which chapter records Vyasa teaching Pratismriti Vidya to Yudhishthira?,3.36,"['15.8', '15.29', '12.32']",False,
+Where does Vyasa meet the Pandavas and guide them before returning to Kamyakavana?,3.36,"['3.5', '3.258', '15.24']",False,
+Where does Arjuna travel to Indrakil mountain and meet Indra?,3.37,"['14.83', '1.218', '3.140']",False,
+Which section begins the Kairata Parva and Arjuna’s quest for divine weapons?,3.37,"['3.168', '7.81', '1.190']",False,
+Which chapter describes Arjuna’s severe penance to please Lord Shiva?,3.38,"['16.8', '7.79', '11.24']",False,
+Where do sages discuss Arjuna’s tapasya with Lord Shankar?,3.38,"['3.168', '3.48', '14.16']",False,
+Where is Arjuna’s stotra or hymn in praise of Lord Shiva found?,3.39,"['6.23', '3.168', '7.79']",False,
+Which section narrates Arjuna’s prayer to Lord Shiva before receiving a boon?,3.39,"['3.168', '3.40', '7.79']",False,
+Which chapter narrates Shiva granting a boon to Arjuna?,3.40,"['15.12', '3.168', '7.79']",False,
+Where does Lord Shankar bless Arjuna with divine weapons and depart?,3.40,"['3.168', '8.81', '8.65']",False,
+Which section describes the Dikpalas gifting divine weapons to Arjuna?,3.41,"['3.174', '3.168', '3.245']",False,
+Where is Arjuna instructed by Indra to ascend to heaven?,3.41,"['3.168', '3.174', '3.171']",False,
+Where does Arjuna ascend to heaven with Matali as his charioteer?,3.42,"['3.42', '3.165', '3.170']",True,1.0
+Which chapter describes Arjuna’s journey from the Himalayas to Indraloka?,3.42,"['2.27', '14.75', '8.81']",False,
+Where is Arjuna’s meeting with Devraj Indra described?,3.43,"['7.84', '7.30', '6.91']",False,
+Which chapter mentions Indra sending a maiden to Kundinpur?,3.43,"['1.112', '1.124', '3.224']",False,
+Which section describes Arjuna learning divine weapons in Indraloka?,3.44,"['3.174', '3.168', '1.139']",False,
+Where does Indra instruct Arjuna in celestial warfare?,3.44,"['3.37', '3.174', '3.168']",False,
+Where is the dialogue between Chitrasena and Urvashi found?,3.45,"['3.45', '6.87', '5.147']",True,1.0
+Which chapter features Chitrasena’s discussion with Urvashi in heaven?,3.45,"['3.45', '12.200', '6.87']",True,1.0
+Where does Urvashi approach Arjuna with desire and curse him upon rejection?,3.46,"['1.182', '3.45', '3.168']",False,
+Which chapter narrates Urvashi’s curse making Arjuna live as a eunuch?,3.46,"['1.213', '4.45', '11.24']",False,
+Which section narrates Lomasha meeting Arjuna and Indra in heaven?,3.47,"['3.47', '3.130', '3.129']",True,1.0
+Where does Lomasha carry Indra’s message to the Pandavas in Kamyakavana?,3.47,"['3.91', '3.125', '3.101']",False,
+Which chapter shows Dhritarashtra expressing worry for his sons?,3.48,"['9.2', '6.84', '6.90']",False,
+Where does Dhritarashtra confide his fears to Sanjaya?,3.48,"['10.6', '5.69', '6.62']",False,
+Which section records Dhritarashtra’s anger during his discussion with Sanjaya?,3.49,"['10.6', '6.59', '6.49']",False,
+Where does Sanjaya attempt to calm the worried Dhritarashtra?,3.49,"['5.69', '6.62', '10.6']",False,
+Where is the description of the Pandavas’ diet during their forest exile?,3.50,"['3.50', '3.262', '4.29']",True,1.0
+Which chapter mentions what food the Pandavas ate while in the forest?,3.50,"['3.50', '3.262', '1.152']",True,1.0
+Where does Sanjaya tell Dhritarashtra about Krishna’s vow to destroy Duryodhana?,3.51,"['9.27', '7.151', '6.62']",False,
+Which chapter contains the account of Krishna’s oath for the Pandavas’ revenge?,3.51,"['1.213', '3.12', '3.311']",False,
+Where does Brihadashva narrate the story of Nala to Yudhishthira?,3.52,"['3.61', '3.76', '3.67']",False,
+Which chapter describes Brihadashva meeting the Pandavas and beginning the Nalopakhyana?,3.52,"['15.24', '3.64', '1.165']",False,
+Where is King Sagara’s penance to obtain children described?,3.106,"['12.122', '5.117', '5.118']",False,
+Which chapter narrates Lord Shiva granting a boon to King Sagara?,3.106,"['1.33', '1.173', '14.66']",False,
+Which section narrates the burning of King Sagara’s sixty thousand sons by Sage Kapila?,3.107,"['15.38', '1.150', '14.4']",False,
+Where is the lineage from Sagara to Bhagiratha described in the Mahabharata?,3.107,"['3.106', '3.107', '1.59']",True,2.0
+Which chapter describes Bhagiratha’s penance to bring the Ganga to earth?,3.108,"['7.60', '3.109', '3.106']",False,
+Where does Ganga grant Bhagiratha the boon to descend from heaven?,3.108,"['3.109', '7.60', '3.108']",True,3.0
+Where is the descent of Ganga from heaven to earth narrated?,3.109,"['3.109', '1.96', '3.114']",True,1.0
+Which chapter describes the salvation of the sons of Sagara through Ganga’s descent?,3.109,"['7.60', '12.1', '5.1']",False,
+Which chapter narrates King Lomapada’s efforts to bring Rishyashringa to his kingdom?,3.110,"['3.106', '3.125', '3.107']",False,
+Where is the story of Rishyashringa and the greatness of Nanda and Kaushiki described?,3.110,"['12.49', '1.1', '3.112']",False,
+Where does the prostitute seduce Rishyashringa to lure him away from his ashram?,3.111,"['3.111', '13.20', '3.112']",True,1.0
+Which chapter shows Vibhandaka questioning the cause of his concern for Rishyashringa?,3.111,"['3.113', '3.112', '5.144']",False,
+Which section contains Rishyashringa describing the appearance of the celibate woman to Vibhandaka?,3.112,"['3.113', '3.112', '4.9']",True,2.0
+Where does Rishyashringa narrate his encounter with the prostitute to his father?,3.112,"['3.112', '1.178', '9.37']",True,1.0
+Where is Rishyashringa’s marriage to King Lomapada’s daughter described?,3.113,"['3.97', '7.55', '3.123']",False,
+Which chapter narrates Lomapada welcoming Sage Vibhandaka and earning his blessing?,3.113,"['3.108', '3.5', '2.2']",False,
+"Which chapter narrates Yudhishthira’s pilgrimage through Kaushiki, Ganga Sagar, and Vaitarani?",3.114,"['1.215', '3.158', '15.37']",False,
+Where is Yudhishthira’s journey to Mahendra Parvat mentioned?,3.114,"['3.158', '7.126', '6.85']",False,
+Where is the story of Parashurama’s lineage beginning with Richika and Gadhikanya told?,3.115,"['1.178', '1.105', '12.173']",False,
+Which chapter describes Jamadagni’s birth by the grace of Sage Bhrigu?,3.115,"['3.116', '13.96', '1.165']",False,
+Where is Parashurama’s act of beheading his mother and reviving her described?,3.116,"['1.178', '9.60', '12.173']",False,
+Which chapter narrates Parashurama’s battle with Kartavirya Arjuna?,3.116,"['8.21', '14.77', '1.190']",False,
+Where is Parashurama’s destruction of the Kshatriyas twenty-one times described?,3.117,"['12.48', '14.77', '1.181']",False,
+Which section mentions Yudhishthira worshipping Parashurama?,3.117,"['3.14', '18.3', '18.2']",False,
+Which chapter tells the story of Ashtavakra’s birth and deformity?,3.132,"['3.132', '13.21', '3.134']",True,1.0
+Where does Ashtavakra first visit King Janaka’s court?,3.132,"['5.86', '13.21', '3.264']",False,
+Where does Ashtavakra converse with the gatekeeper before meeting King Janaka?,3.133,"['3.133', '13.21', '14.16']",True,1.0
+Which chapter describes the dialogue between Ashtavakra and Janaka?,3.133,"['13.21', '1.165', '14.16']",False,
+Which chapter narrates Ashtavakra’s debate with Bandi in King Janaka’s court?,3.134,"['3.134', '3.236', '13.21']",True,1.0
+Where does Ashtavakra regain his normal form after bathing in the Samanga River?,3.134,"['3.132', '13.21', '15.19']",False,
+Where does Bhima fight wild beasts and get caught by a giant serpent?,3.178,"['3.180', '3.179', '5.51']",False,
+Which chapter describes Bhima’s encounter with the python in the forest?,3.178,"['3.178', '3.11', '1.151']",True,1.0
+Which chapter features Bhima’s conversation with Nahusha in serpent form?,3.179,"['3.180', '3.179', '3.161']",True,2.0
+Where is Yudhishthira shown searching for Bhima after his capture?,3.179,"['1.129', '3.68', '7.127']",False,
+Which section narrates Yudhishthira’s dialogue with Nahusha in serpent form?,3.180,"['3.180', '3.179', '3.14']",True,1.0
+Where does Yudhishthira answer Nahusha’s questions to free Bhima?,3.180,"['3.180', '1.162', '13.100']",True,1.0
+Where does Nahusha get released from his serpent curse after Yudhishthira’s answers?,3.181,"['3.180', '3.179', '3.66']",False,
+Which chapter ends the story of Nahusha’s liberation and Bhima’s release?,3.181,"['3.161', '7.136', '1.129']",False,
+Which chapter describes Draupadi teaching Satyabhama about the duties of a virtuous wife?,3.233,"['3.233', '3.234', '4.19']",True,1.0
+Where is the conversation between Draupadi and Satyabhama on chastity found?,3.233,"['3.233', '3.27', '5.59']",True,1.0
+Which chapter explains how a wife can please her husband through devoted service?,3.234,"['3.234', '12.144', '13.46']",True,1.0
+Where is the teaching on serving one’s husband with devotion described?,3.234,"['12.359', '12.243', '12.193']",False,
+Where does Satyabhama depart for Dwaraka with Shri Krishna?,3.235,"['3.235', '2.2', '3.20']",True,1.0
+Which section narrates Satyabhama assuring Draupadi before leaving?,3.235,"['3.233', '3.27', '4.19']",False,
+Which chapter describes the birth of Shri Ram and the origin of Kubera?,3.274,"['12.231', '1.68', '3.277']",False,
+Where is Kubera’s attainment of wealth narrated?,3.274,"['5.114', '13.54', '3.162']",False,
+Where is Ravana’s origin and Kubera’s curse on him described?,3.275,"['3.275', '1.6', '3.274']",True,1.0
+"Which section tells of the birth and penance of Ravana, Kumbhakarna, and Vibhishana?",3.275,"['1.1', '1.4', '1.68']",False,
+Which chapter narrates the gods appealing to Brahma to stop Ravana’s tyranny?,3.276,"['12.39', '1.181', '5.13']",False,
+Where is the origin of the monkey and bear warriors described?,3.276,"['3.283', '3.287', '3.286']",False,
+Which section tells about Ram’s exile and Bharata’s visit to Chitrakoot?,3.277,"['6.119', '3.277', '6.48']",True,2.0
+Where is the killing of Khar and Dushan described?,3.277,"['9.27', '9.8', '9.61']",False,
+Where does Ravana abduct Sita after Maricha’s death?,3.278,"['3.278', '3.280', '3.291']",True,1.0
+Which chapter narrates the killing of Maricha disguised as a deer?,3.278,"['3.278', '3.184', '3.39']",True,1.0
+Which section describes the killing of Jatayu and his funeral by Shri Ram?,3.279,"['11.24', '8.96', '4.23']",False,
+Where does Kabandha’s story and his killing by Ram appear?,3.279,"['8.63', '8.96', '8.93']",False,
+Which chapter narrates the alliance between Rama and Sugriva and the killing of Vali?,3.280,"['3.280', '3.274', '9.35']",True,1.0
+Where is Trijata comforting Sita in Ashok Vatika described?,3.280,"['3.281', '3.296', '3.233']",False,
+Where does the dialogue between Ravana and Sita take place in Lanka?,3.281,"['3.148', '3.284', '3.291']",False,
+Which chapter records Ravana’s persuasion and Sita’s steadfast refusal?,3.281,"['3.278', '3.148', '3.284']",False,
+Which chapter narrates Hanuman’s return from Lanka and recounting his journey?,3.282,"['3.148', '9.35', '1.168']",False,
+Where does Sugriva send the monkey army to search for Sita?,3.282,"['3.148', '3.282', '3.287']",True,2.0
+Which section describes the building of the bridge to Lanka?,3.283,"['3.284', '6.11', '1.21']",False,
+Where is Angada’s embassy to Ravana mentioned?,3.283,"['3.284', '3.281', '3.163']",False,
+Which chapter depicts Angada delivering Ram’s message to Ravana?,3.284,"['8.79', '9.10', '8.64']",False,
+Where is the battle between the Vanaras and Rakshasas narrated?,3.284,"['6.94', '4.32', '3.271']",False,
+Which chapter narrates Swaha’s union with Agni taking the form of sages’ wives?,3.224,"['3.226', '3.225', '1.23']",False,
+Where is the story of Agni’s union with Swaha described?,3.224,"['12.342', '3.217', '3.225']",False,
+Which chapter describes the birth of Skanda (Kartikeya)?,3.225,"['3.228', '3.230', '3.231']",False,
+Where is the destruction of mountains like Krauncha by Skanda mentioned?,3.225,"['3.227', '12.327', '14.77']",False,
+Where is Vishwamitra performing the sacred rites for Skanda described?,3.226,"['15.19', '1.175', '9.55']",False,
+Which chapter mentions Agnidev protecting the child Skanda?,3.226,"['3.228', '3.231', '3.227']",False,
+Where does Skanda grant protection to Indra and the other gods after their defeat?,3.227,"['3.227', '3.229', '5.18']",True,1.0
+Which section narrates the gods seeking refuge in Skanda?,3.227,"['3.228', '5.13', '1.25']",False,
+Which chapter tells of Skanda being made the commander of the gods?,3.229,"['3.230', '3.227', '3.228']",False,
+Where is Skanda’s marriage to Devasena described?,3.229,"['3.224', '3.228', '3.231']",False,
+Which chapter explains how the Krittikas became stars in the sky?,3.230,"['3.230', '3.265', '9.21']",True,1.0
+Where is the description of planets causing troubles to humans found?,3.230,"['6.3', '3.103', '1.65']",False,
+Where is Skanda’s battle with Mahishasura narrated?,3.231,"['3.227', '3.228', '6.54']",False,
+Which chapter mentions Skanda’s journey with Rudra and the gods?,3.231,"['3.228', '3.231', '12.327']",True,2.0
+Which section lists the many names and titles of Kartikeya?,3.232,"['3.232', '9.45', '3.265']",True,1.0
+Where is the praise and glorification of Kartikeya described?,3.232,"['1.137', '3.232', '7.181']",True,2.0
+Which chapter narrates the great battle between Rama and Ravana’s armies?,3.285,"['3.285', '9.35', '9.34']",True,1.0
+Where is the clash of the Vanara and Rakshasa forces described?,3.285,"['8.75', '6.94', '8.89']",False,
+Where does Ravana awaken Kumbhakarna for battle?,3.286,"['3.288', '3.285', '6.44']",False,
+Which section describes Ravana’s grief over Prahastha and Dhumraksha’s deaths?,3.286,"['7.77', '1.9', '14.68']",False,
+Which chapter depicts the killing of Kumbhakarna by Shri Ram?,3.287,"['4.54', '6.45', '11.24']",False,
+Where are Vajravega and Pramathika slain in battle?,3.287,"['8.5', '8.6', '7.10']",False,
+Where does Indrajit use illusion in battle against Rama and Lakshmana?,3.288,"['9.31', '3.288', '6.22']",True,2.0
+Which chapter narrates Rama and Lakshmana becoming unconscious in Indrajit’s attack?,3.288,"['3.289', '9.60', '3.288']",True,3.0
+Which chapter describes Lakshmana killing Indrajit?,3.289,"['3.288', '7.30', '3.287']",False,
+Where does Avindhya restrain Ravana from killing Sita?,3.289,"['3.291', '3.284', '3.281']",False,
+Which chapter recounts the final duel between Rama and Ravana?,3.290,"['9.34', '9.60', '9.35']",False,
+Where is Ravana’s death at Rama’s hands described?,3.290,"['7.59', '3.278', '3.274']",False,
+Which chapter narrates Sita’s trial by fire and divine vindication?,3.291,"['3.284', '3.281', '9.13']",False,
+Where does Rama return to Ayodhya and reunite with Bharata?,3.291,"['3.148', '3.115', '3.274']",False,
+Where does Sage Markandeya console or reassure Yudhishthira?,3.292,"['3.203', '3.215', '3.188']",False,
+Which section contains Markandeya’s counsel to Yudhishthira during exile?,3.292,"['3.206', '3.203', '3.299']",False,
+Which chapter tells of King Aswapati’s boon of a daughter Savitri?,3.293,"['3.293', '1.16', '1.58']",True,1.0
+Where is Aswapati’s search for a suitable husband for Savitri described?,3.293,"['3.224', '1.46', '1.14']",False,
+Which chapter narrates Savitri’s decision to marry Satyavan?,3.294,"['3.294', '3.296', '1.8']",True,1.0
+Where does Savitri express her firm resolve to wed Satyavan despite warnings?,3.294,"['3.295', '3.296', '3.298']",False,
+Which chapter narrates the wedding of Savitri and Satyavan?,3.295,"['3.296', '1.1', '3.271']",False,
+Where is the account of Savitri’s devoted service to her family found?,3.295,"['3.293', '3.296', '1.1']",False,
+Which chapter depicts Savitri’s vow and her journey to the forest with Satyavan?,3.296,"['3.294', '3.296', '1.1']",True,2.0
+Where is Savitri’s act of fasting before accompanying Satyavan described?,3.296,"['3.297', '3.296', '13.106']",True,2.0
+Which chapter contains the dialogue between Savitri and Yama?,3.297,"['12.199', '3.297', '13.68']",True,2.0
+Where does Yama restore Satyavan’s life and bless Savitri?,3.297,"['3.298', '3.297', '3.296']",True,2.0
+Which chapter describes Dyumatsena’s concern for his son Satyavan?,3.298,"['3.295', '3.294', '7.115']",False,
+Where does Savitri explain the cause of her delayed return with Satyavan?,3.298,"['3.294', '3.296', '3.298']",True,3.0
+Where does Dyumatsena regain his kingdom with the people’s request?,3.299,"['3.299', '3.295', '2.31']",True,1.0
+Which chapter describes the blessings of Savitri’s hundred sons and brothers?,3.299,"['1.116', '1.1', '1.66']",False,
+Which chapter describes Surya warning Karna about Indra’s visit?,3.300,"['8.96', '7.174', '8.68']",False,
+Where does Karna insist on giving away his divine armor and earrings?,3.300,"['12.5', '3.303', '3.300']",True,3.0
+Which chapter describes Surya warning Karna against giving his earrings to Indra?,3.301,"['3.300', '3.302', '7.134']",False,
+Where does Surya advise Karna to keep his divine armor and earrings?,3.301,"['3.301', '3.303', '3.302']",True,1.0
+Which chapter narrates the dialogue between Surya and Karna?,3.302,"['7.174', '8.96', '1.136']",False,
+Where does Karna resolve to part with his armor only after gaining a boon from Indra?,3.302,"['12.5', '8.96', '7.174']",False,
+Where does Sage Durvasa arrive at Kuntibhoja’s court?,3.303,"['15.19', '15.30', '1.112']",False,
+Which chapter describes Kuntibhoja assigning Pritha (Kunti) to serve Durvasa?,3.303,"['1.112', '3.304', '3.305']",False,
+Which chapter narrates Kunti’s conversation with her father about Durvasa’s visit?,3.304,"['5.133', '15.30', '1.112']",False,
+Where is Kunti’s service to the Brahmin guest described?,3.304,"['3.305', '3.304', '3.303']",True,2.0
+Where does Durvasa teach Kunti the divine mantra as a reward for her service?,3.305,"['15.30', '3.306', '3.304']",False,
+Which section describes the Brahmin granting Kunti a boon for her devotion?,3.305,"['13.152', '3.305', '15.30']",True,2.0
+Which chapter describes Kunti invoking the Sun God through the mantra?,3.306,"['1.111', '3.306', '15.30']",True,2.0
+Where is the dialogue between Kunti and Surya narrated?,3.306,"['3.306', '3.307', '5.133']",True,1.0
+Where does Surya bless Kunti and cause her to conceive Karna?,3.307,"['3.307', '3.306', '15.30']",True,1.0
+Which chapter narrates the divine conception of Karna by Kunti and Surya?,3.307,"['5.145', '3.306', '7.174']",False,
+Which chapter tells of Karna’s birth and Kunti setting him afloat in the river?,3.308,"['1.136', '11.27', '1.137']",False,
+Where does Kunti grieve after abandoning her infant son Karna?,3.308,"['5.145', '15.18', '5.136']",False,
+Which chapter describes Karna’s adoption by Adhiratha and Radha?,3.309,"['5.141', '5.145', '7.137']",False,
+Where is Indra’s arrival to meet Karna mentioned?,3.309,"['8.96', '7.174', '8.68']",False,
+Where does Indra receive Karna’s divine armor and earrings in exchange for a boon?,3.310,"['3.310', '3.300', '3.303']",True,1.0
+Which chapter narrates Indra blessing Karna with the Vasavi Shakti weapon?,3.310,"['8.96', '7.174', '7.134']",False,
+Which chapter narrates the Pandavas chasing a deer that stole the Brahmin’s firewood?,3.311,"['3.311', '1.213', '3.258']",True,1.0
+Where is the incident leading to the Yaksha’s lake described?,3.311,"['3.153', '3.312', '3.136']",False,
+Where do the Pandavas fall unconscious one after another by the lake?,3.312,"['3.258', '3.236', '15.24']",False,
+Which section precedes Yudhishthira’s encounter with the Yaksha?,3.312,"['3.158', '13.68', '3.314']",False,
+Which chapter contains the dialogue between Yaksha and Yudhishthira?,3.313,"['13.68', '3.314', '7.126']",False,
+Where does Yaksha restore the lives of the Pandavas after being pleased with Yudhishthira’s answers?,3.313,"['3.314', '3.258', '3.158']",False,
+Which section includes Yudhishthira’s famous philosophical responses to Yaksha?,3.313,"['3.314', '13.68', '3.158']",False,
