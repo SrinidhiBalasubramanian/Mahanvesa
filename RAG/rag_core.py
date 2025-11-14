@@ -8,7 +8,6 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 from typing import List, Dict, Tuple
 
-# Import the classes we re-created
 from vector_store import EmbeddingSearchEvaluator
 from query_enricher import ProcessQuery
 
@@ -16,26 +15,20 @@ from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 import warnings
 
-# Suppress warnings
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 warnings.filterwarnings("ignore", category=FutureWarning)
 warnings.filterwarnings("ignore", category=UserWarning)
 
-# --- Helper function to load JSONs ---
 
 def read_json(filepath):
-    """Reads a JSON file and returns the data."""
     if not os.path.exists(filepath):
         print(f"Error: File not found: {filepath}")
         return None
-    # MODIFICATION: Added encoding='utf-8' for safety
     with open(filepath, 'r', encoding='utf-8') as f:
         return json.load(f)
 
-# --- All the new logic from the Notebook ---
 
 def build_entity_matrix(ch_entities: Dict[str, Dict[str, int]]):
-    """Create normalized entity frequency matrix (chapters × entities)."""
     print("Building entity matrix...")
     all_entities = sorted({e for ents in ch_entities.values() for e in ents})
     df = pd.DataFrame(0, index=ch_entities.keys(), columns=all_entities)
@@ -45,7 +38,6 @@ def build_entity_matrix(ch_entities: Dict[str, Dict[str, int]]):
             if ent in df.columns:
                 df.loc[ch, ent] = freq
 
-    # Normalize per chapter (term frequency normalization)
     df_norm = df.div(df.sum(axis=1), axis=0).fillna(0)
     print(f"Entity matrix built. Shape: {df.shape}")
     return df, df_norm, all_entities
@@ -84,7 +76,7 @@ class GraphScorer:
                 else:
                     groups.append(current_group)
                     current_group = [curr]
-            except ValueError: # Handle non-numeric entity IDs if they exist
+            except ValueError:
                 groups.append(current_group)
                 current_group = [curr]
         groups.append(current_group)
@@ -115,7 +107,7 @@ class GraphScorer:
         prop_scores = np.zeros(len(self.df_entities))
         valid_cols = [e for e in query_entities if e in self.df_entities.columns]
         
-        if not valid_cols: # No valid entities, no propagation
+        if not valid_cols:
              return prop_scores
 
         chapter_mask = (self.df_entities[valid_cols].sum(axis=1) > 0).astype(int).values
@@ -174,13 +166,11 @@ def cluster_best_docs(doc_scores_dict: Dict[str, float], top_n: int = 50, num_cl
     return best_docs
 
 def make_context(top_ids: List[str], verses: Dict[str, str]) -> str:
-    """Builds the context string from the VERSES file."""
     context = ""
     for i in top_ids:
         verses_context = {}
         v_id_prefix = f"{i.strip('M.')}."
         
-        # Find all verses starting with this chapter ID
         for vid in verses.keys():
             if vid.startswith(v_id_prefix):
                 verses_context[vid] = verses[vid]
@@ -193,51 +183,41 @@ def make_context(top_ids: List[str], verses: Dict[str, str]) -> str:
         return "No context found for the retrieved chapter IDs."
     return context
 
-# --- The New RAG Pipeline Class ---
 
 class RAGPipeline:
     def __init__(self):
         if not config.OPENAI_API_KEY:
             raise ValueError("OPENAI_API_KEY is not set.")
 
-        # 1. Initialize LLM Generator
         self.llm = ChatOpenAI(
             model_name=config.LLM_GENERATOR_MODEL,
             openai_api_key=config.OPENAI_API_KEY,
-            temperature=0, # Set to 0 for factual answers
+            temperature=0,
             max_tokens=1024
         )
         print(f"Generator LLM loaded: {config.LLM_GENERATOR_MODEL}")
 
-        # 2. Load EmbeddingSearchEvaluator
         self.embeddings = EmbeddingSearchEvaluator()
 
-        # 3. Load data for GraphScorer
         self.chapter_entity_ids = read_json(config.CHAPTER_ENTITY_ID_FILE)
         df_entities, df_norm, all_entities = build_entity_matrix(self.chapter_entity_ids)
         
-        # 4. Initialize GraphScorer
         self.graph_scorer = GraphScorer(df_entities, df_norm, all_entities)
 
-        # 5. Load other required JSONs
         self.entity_index = read_json(config.KB_NAME_MAP_FILE)
         self.verses = read_json(config.VERSES_FILE)
         
-        # --- [START] NEW CODE ADDED ---
         self.full_text_data = read_json(config.FULL_TEXT_FILE)
         
         if not self.entity_index or not self.verses or not self.full_text_data:
             raise FileNotFoundError("Could not load entity_index.json, verses.json, or full_text.json")
 
-        # Pre-sort keys for faster lookup in get_formatted_context
         try:
             self._sorted_full_text_keys = sorted(self.full_text_data.keys())
         except AttributeError:
             print("Warning: full_text_data is not a dictionary. Context display may fail.")
             self._sorted_full_text_keys = []
-        # --- [END] NEW CODE ADDED ---
 
-        # 6. Define the final prompt template (from notebook)
         self.system_prompt = """You are an expert on Mahabharata.
 Use the information from the context to give a detailed answer and analysis. Write a descriptive essay
 Be authentic and use references of chapters to back up your answer. Quote verses werever required.
@@ -262,23 +242,16 @@ Answer in a clear, direct manner:
 
 
     def generate_answer(self, query: str, a: float = 0.9, b: float = 0.1):
-        """
-        The main pipeline from the notebook:
-        Embed-Score -> Entity-Score -> Graph-Score -> Fuse -> Cluster -> Generate
-        """
         print(f"\n--- Processing Query: {query} ---")
         
-        # 1. Get Embedding Scores
         print("Step 1: Calculating embedding scores...")
         emb_scores = self.embeddings.embedding_scores(query)
         
-        # 2. Process Query for Entities
         print("Step 2: Extracting entities from query...")
         p = ProcessQuery(query, self.entity_index)
         p.score_query_entities()
         query_entity_ids, query_weights = p.get_scored_entities()
 
-        # 3. Get Graph Scores
         print("Step 3: Calculating graph scores...")
         if query_entity_ids:
             graph_scores = self.graph_scorer.score(query_entity_ids, query_weights)
@@ -286,47 +259,35 @@ Answer in a clear, direct manner:
             print("No entities found, skipping graph score.")
             graph_scores = {idx: 0.0 for idx in self.chapter_entity_ids.keys()}
 
-        # 4. Fuse Scores
         print(f"Step 4: Fusing scores (a={a}, b={b})...")
         fused_scores = fuse(emb_scores, graph_scores, a, b)
 
-        # 5. Cluster Docs
         print("Step 5: Clustering top 50 documents...")
         top_ids = cluster_best_docs(fused_scores, top_n=50, num_clusters=2)
         print(f"Retrieved {len(top_ids)} document IDs after clustering: {top_ids[:5]}...")
         
-        # --- MODIFIED: Return two values ---
         if not top_ids:
             return "I could not find any relevant verses for your query.", []
 
-        # 6. Build Context from VERSES
         print("Step 6: Building context from verses.json...")
         context = make_context(top_ids, self.verses)
         
-        # 7. Build the final prompt
         final_prompt = self.prompt_template.format(
             context=context,
             query=query
         )
         
-        # 8. Generate Answer with LLM
         print("Step 7: Generating final answer with LLM...")
         response = self.llm.invoke(final_prompt)
         
-        # --- MODIFIED: Return two values ---
         return response.content, top_ids
 
     def direct_answer_openai(self, query: str):
-        """
-        Generates a direct answer from the model without using RAG context.
-        """
         print(f"\n--- Processing Query Directly: {query} ---")
         
-        # We re-use the system prompt to keep the persona, but NOT the user prompt
-        # that mentions context.
         direct_prompt_template = ChatPromptTemplate.from_messages([
             ("system", self.system_prompt),
-            ("user", "{query}") # Just the query
+            ("user", "{query}")
         ])
         
         final_prompt = direct_prompt_template.format(query=query)
@@ -336,13 +297,7 @@ Answer in a clear, direct manner:
         
         return response.content
 
-    # --- [START] NEW METHOD ADDED ---
-# --- [START] NEW METHOD ADDED ---
     def get_formatted_context(self, chapter_ids: List[str]) -> str:
-        """
-        Extracts and formats the SANSKRIT text from full_text.json
-        for display in the Streamlit UI, based on your logic.
-        """
         if not chapter_ids:
             return "No chapters were retrieved to display."
 
@@ -351,55 +306,39 @@ Answer in a clear, direct manner:
 
         final_display_text = ""
         
-        # Process all retrieved IDs (e.g., ['M.3.28'])
         for ch_id in chapter_ids:
             
-            # 1. Sanitize the ID (e.g., "M.3.28" -> "3.28")
             processed_id = ch_id.lstrip('M.')
             
-            # 2. Check for an exact match first (handles "M.3.28.1")
             if processed_id in self.full_text_data:
                 try:
-                    # --- [MODIFIED] ---
-                    # Changed [1] to [0] to get Sanskrit
                     sanskrit_text = self.full_text_data[processed_id][0] 
-                    # --- [END MODIFIED] ---
                     
                     final_display_text += f"### 📜 Text for {ch_id}\n\n"
                     final_display_text += f"**{processed_id}:** {sanskrit_text}\n\n---\n\n"
-                    continue # Go to the next ch_id in chapter_ids
+                    continue
                 except (IndexError, TypeError, KeyError):
                     final_display_text += f"Found {ch_id} but data was malformed.\n"
                     continue
 
-            # 3. If no exact match, handle partial ID (e.g., "M.3.28")
-            # We add a '.' to match "3.28." (e.g., "3.28.1")
             prefix = processed_id + '.'
             matching_texts = []
 
-            # Use the pre-sorted keys from __init__
             for key in self._sorted_full_text_keys:
                 if key.startswith(prefix):
                     try:
-                        # --- [MODIFIED] ---
-                        # Changed [1] to [0] to get Sanskrit
                         sanskrit_text = self.full_text_data[key][0]
-                        # --- [END MODIFIED] ---
                         
-                        # Format as: **3.28.1:** ...
                         matching_texts.append(f"**{key}:** {sanskrit_text}")
                     except (IndexError, TypeError, KeyError):
-                        continue # Skip malformed data
+                        continue
             
             if matching_texts:
                 final_display_text += f"### 📜 Full Text: Chapter {ch_id}\n\n"
-                # Join all verses with a double newline
                 final_display_text += "\n\n".join(matching_texts)
                 final_display_text += "\n\n---\n\n"
 
         if not final_display_text:
-            # This is the error you were seeing
             return f"No raw text found for the retrieved chapter IDs {chapter_ids} in `full_text.json`."
             
         return final_display_text
-    # --- [END] NEW METHOD ADDED ---
